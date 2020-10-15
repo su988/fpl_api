@@ -1,6 +1,6 @@
 # fpl_api
 
-- Python request to get data from Fantasy Premiere League Data
+- Python request to get data from Fantasy Premiere League API
 - Pandas library to clean data 
 
 Todo 
