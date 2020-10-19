@@ -2,13 +2,8 @@
 
 ##### Tracking player / mini league data
 
-Done
 - Python request to get data from Fantasy Premiere League API
-- Pandas library to clean data 
-- Postgres db setup with sqlalchemy 
-- pandas dataframe added to postgres db as new tables
-
-Todo 
-- setup express server 
-- connect server with database
-- front end (react)
+- Pandas library to clean data
+- Sqlalchemy to export dataframe into Postgres databse
+- Setup express server with Postgres database
+- Fetched data from server into React front end
