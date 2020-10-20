@@ -38,7 +38,7 @@ const MiniLeague = () => {
               <td>{manager.rank}</td>
               <td>{manager.entry_name}</td>
               <td>{manager.event_total}</td>
-            <td>{manager.total}</td>
+              <td>{manager.total}</td>
             </tr>
             ))}
           </tbody>

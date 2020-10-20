@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const pool = require('./db.js')
 
-const game_week = 4
+const game_week = 5;
 
 app.use(cors());
 app.use(express.json());
@@ -14,7 +14,7 @@ app.get('/mini-league', async (req, res) => {
 
     res.json(mini_league.rows);
   } catch (err) {
-    console.error(err.message)
+    console.error(err.message);
   }
 })
 
