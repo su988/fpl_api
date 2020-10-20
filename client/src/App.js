@@ -2,15 +2,17 @@ import React from 'react';
 import './App.css';
 import './Components/MiniLeague'
 import MiniLeague from './Components/MiniLeague';
-import KingOfWeek from './Components/KingOfWeek';
-import HighestGameWeek from './Components/HighestGameWeek';
+import GameWeekWinners from './Components/GameWeekWinners';
+import FetchManagerInfo from './Components/FetchManagerInfo';
+import Players from './Components/Players';
 
 function App() {
   return (
     <div>
       <MiniLeague />
-      <KingOfWeek />
-      <HighestGameWeek />
+      <FetchManagerInfo />
+      <GameWeekWinners />
+      <Players />
     </div>
 
   );

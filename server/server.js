@@ -18,16 +18,6 @@ app.get('/mini-league', async (req, res) => {
   }
 })
 
-app.get('/players', async (req, res) => {
-  try {
-    const players = await pool.query('SELECT * FROM player_data WHERE game_week = $1;', [game_week])
-
-    res.json(players.rows);
-  } catch (err) {
-    console.error(err.message)
-  }
-})
-
 app.get('/king', async (req, res) => {
   try {
     const king = await pool.query('SELECT * FROM mini_league WHERE game_week = $1 AND event_total = (SELECT MAX(event_total) FROM mini_league WHERE game_week = $1);', [game_week])
@@ -48,6 +38,31 @@ app.get('/highest-gw', async (req, res) => {
   }
 })
 
+app.get('/gw-winners', async (req, res) => {
+  try {
+    const winners = await pool.query(
+      'SELECT a.game_week, a.player_name, a.event_total \
+        FROM mini_league AS a \
+        JOIN (SELECT game_week, MAX(event_total) as event_total \
+        FROM mini_league GROUP BY game_week) AS b \
+        ON a.game_week = b.game_week AND a.event_total = b.event_total \
+        ORDER BY game_week;')
+
+    res.json(winners.rows)
+  } catch (err) {
+    console.error(err.message)
+  }
+})
+
+app.get('/players', async (req, res) => {
+  try {
+    const players = await pool.query('SELECT * FROM player_data WHERE game_week = $1;', [game_week])
+
+    res.json(players.rows);
+  } catch (err) {
+    console.error(err.message)
+  }
+})
 
 app.listen(5000, () => {
   console.log(`server is up and running on port 5000`)

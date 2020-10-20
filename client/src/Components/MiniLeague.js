@@ -21,27 +21,30 @@ const MiniLeague = () => {
 
   return (
     <Fragment>
-      <h2>OG League</h2>
-      <table className='table w-75 m-auto '>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Team</th>
-            <th>GW</th>
-            <th>Total</th>
-          </tr>
-        </thead>
-        <tbody>
-          {league.map((manager) => (
-          <tr key={manager.entry}>
-            <td>{manager.rank}</td>
-            <td>{manager.entry_name}</td>
-            <td>{manager.event_total}</td>
-          <td>{manager.total}</td>
-          </tr>
-          ))}
-        </tbody>
-      </table>
+      <div>
+        <h2>OG League</h2>
+        <table className='table w-75 m-auto '>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Team</th>
+              <th>GW</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {league.map((manager) => (
+            <tr key={manager.entry}>
+              <td>{manager.rank}</td>
+              <td>{manager.entry_name}</td>
+              <td>{manager.event_total}</td>
+            <td>{manager.total}</td>
+            </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      
     </Fragment>
   )
 }
