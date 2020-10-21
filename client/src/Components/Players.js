@@ -1,5 +1,6 @@
 import React, {Fragment, useState, useEffect} from 'react'
 import PlayerInfo from './PlayerInfo';
+import './Players.css'
 
 const Players = () => {
   const [mid, setMid] = useState([])
@@ -32,11 +33,12 @@ const Players = () => {
 
   return (
     <Fragment>
-      <PlayerInfo data={fwd} title={"Forwards"}/>
-      <PlayerInfo data={mid} title={'Midfielders'}/>
-      <PlayerInfo data={def} title={'Defenders'}/>
-      <PlayerInfo data={gk} title={'Goalkeepers'}/>
-
+      <div className="players">
+        <PlayerInfo data={fwd} title={"Attackers"}/>
+        <PlayerInfo data={mid} title={'Midfielders'}/>
+        <PlayerInfo data={def} title={'Defenders'}/>
+        <PlayerInfo data={gk} title={'Goalkeepers'}/>
+      </div>
     </Fragment>
   )
 }

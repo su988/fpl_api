@@ -1,0 +1,43 @@
+.player {
+  overflow: hidden;
+}
+
+.player_info {
+  width: 100%;
+  background-color: #6c6c6c;
+  color: azure;
+  padding: 10px;
+  height: 300px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  box-sizing: content-box;
+}
+
+.player_info_buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.player_info_buttons h3 {
+  font-size: 16px;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 1px solid azure;
+  margin-right: 10px;
+  margin-top: 10px;
+  padding: 5px;
+  width: 70px;
+  border-radius: 10px;
+  color: azure;
+}
+
+.on {
+  background-color: #00e973;
+  border: none;
+  color: #3d003e;
+}

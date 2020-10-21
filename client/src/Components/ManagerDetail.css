@@ -1,0 +1,25 @@
+.manager_detail {
+  width: 100%;
+  background-color: #6c6c6c;
+  color: azure;
+  height: 200px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.gg-crown-parent {
+  position: relative;
+}
+
+.gg-crown {
+  color: #ff0082;
+  position: absolute;
+  top: -10px;
+  left: 30px;
+  -webkit-transform: rotate(320deg);
+  -moz-transform: rotate(320deg);
+  -ms-transform: rotate(320deg);
+  -o-transform: rotate(320deg);
+  transform: rotate(320deg);
+  display: inline-block;
+}

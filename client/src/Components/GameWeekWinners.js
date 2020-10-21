@@ -1,4 +1,5 @@
-import React, {Fragment, useState, useEffect} from 'react'
+import React, {Fragment, useState, useEffect} from 'react';
+import './GameWeekWinner.css';
 
 const GameWeekWinners = () => {
   const [winners, setWinners] = useState([])
@@ -20,13 +21,14 @@ const GameWeekWinners = () => {
    
   return (
     <Fragment>
-      <div>
-        <h2>Gameweek Winners</h2>
+      <div className="gw_winners">
+        <h4>Gameweek Winners</h4>
         <table className='table w-75 m-auto '>
           <thead>
             <tr>
               <th>#</th>
-              <th>Player</th>
+              <th>Manager</th>
+              <th>Team</th>
               <th>Score</th>
             </tr>
           </thead>
@@ -35,6 +37,7 @@ const GameWeekWinners = () => {
             <tr key={manager.game_week}>
               <td>{manager.game_week}</td>
               <td>{manager.player_name}</td>
+              <td>{manager.entry_name}</td>
               <td>{manager.event_total}</td>
             </tr>
             ))}

@@ -41,7 +41,7 @@ app.get('/highest-gw', async (req, res) => {
 app.get('/gw-winners', async (req, res) => {
   try {
     const winners = await pool.query(
-      'SELECT a.game_week, a.player_name, a.event_total \
+      'SELECT a.game_week, a.player_name, a.event_total, a.entry_name \
         FROM mini_league AS a \
         JOIN (SELECT game_week, MAX(event_total) as event_total \
         FROM mini_league GROUP BY game_week) AS b \

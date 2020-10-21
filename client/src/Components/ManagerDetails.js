@@ -4,13 +4,15 @@ const ManagerDetails = ({data, title}) => {
   
   return (
     <Fragment>
-      <div>
-        <h2>{title}</h2>
-        <table className='table w-75 m-auto '>
+      <div className='gg-crown-parent'>
+        <i className="gg-crown"></i>
+        <h4>{title}</h4>
+        <table className='table'>
           <thead>
             <tr>
               <th>Player</th>
               <th>Team</th>
+              <th>Score</th>
             </tr>
           </thead>
           <tbody>

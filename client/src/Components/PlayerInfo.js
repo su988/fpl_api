@@ -1,7 +1,9 @@
 import React, {Fragment, useState, useEffect} from 'react'
+import Players from './Players';
+import './Players.css';
 
 const PlayerInfo = ({data, title}) => {
-  const [gameWeek, setGameWeek] = useState(false)
+  const [gameWeek, setGameWeek] = useState(true)
   const [totalPoints, setTotalPoints] = useState(false)
   const [sortedData, setSortedData] = useState([])
 
@@ -24,18 +26,23 @@ const PlayerInfo = ({data, title}) => {
 
   useEffect(() => {
     initialSort();
-  }, []);
+  });
 
   return (
     <Fragment>
-      <div>
-        <h2>{title}</h2>
-        <button className={gameWeek ? 'on' : 'off'} onClick={gameweekOn}>
-          GameWeek
-        </button>
-        <button className={totalPoints ? 'on' : 'off'} onClick={totalOn}>
-          Total
-        </button>
+      <div className='player_info'>
+        
+        <div className='player_info_buttons'>
+          <h3>{title}</h3>
+          <div>
+            <button className={gameWeek ? 'on' : 'off'} onClick={gameweekOn}>
+            GW
+            </button>
+            <button className={totalPoints ? 'on' : 'off'} onClick={totalOn}>
+              Total
+            </button>
+          </div>
+        </div>
         
         <table className='table w-75 m-auto '>
           <thead>
@@ -43,7 +50,11 @@ const PlayerInfo = ({data, title}) => {
               <th>Name</th>
               <th>GW</th>
               <th>Total</th>
-              <th></th>
+              <th>Price</th>
+              <th>Goals</th>
+              <th>Assists</th>
+              <th>CS</th>
+              <></>
             </tr>
           </thead>
           <tbody>
@@ -52,10 +63,15 @@ const PlayerInfo = ({data, title}) => {
               <td>{`${player.first_name} ${player.last_name}`}</td>
               <td>{player.event_points}</td>
               <td>{player.total_points}</td>
+              <td>£{player.now_cost}</td>
+              <td>{player.goals_scored}</td>
+              <td>{player.assists}</td>
+              <td>{player.clean_sheets}</td>
             </tr>
             ))}
           </tbody>
         </table>
+
       </div>
     </Fragment>
   )

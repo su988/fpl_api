@@ -1,4 +1,5 @@
 import React, {Fragment, useState, useEffect} from 'react'
+import './MiniLeague.css'
 
 const MiniLeague = () => {
   const [league, setLeague] = useState([])
@@ -21,9 +22,9 @@ const MiniLeague = () => {
 
   return (
     <Fragment>
-      <div>
-        <h2>OG League</h2>
-        <table className='table w-75 m-auto '>
+      <div className='mini_league'>
+        <h4>League Table</h4>
+        <table className='table'>
           <thead>
             <tr>
               <th>#</th>

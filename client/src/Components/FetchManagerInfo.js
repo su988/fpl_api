@@ -1,5 +1,6 @@
 import React, {Fragment, useState, useEffect} from 'react'
 import ManagerDetails from './ManagerDetails';
+import './ManagerDetail.css';
 
 const FetchManagerInfo = () => {
   const [highestManager, setHighestManager] = useState([])
@@ -36,8 +37,12 @@ const FetchManagerInfo = () => {
   
   return (
     <Fragment>
-      <ManagerDetails title={"King of the Week"} data={king}/>
-      <ManagerDetails title={'Highest GW Score'} data={highestManager}/>
+      <div className='king manager_detail'>
+        <ManagerDetails title={'Manager of the Week'} data={king}/>
+      </div>
+      <div className="highest_score manager_detail">
+        <ManagerDetails title={'Highest GW Score'} data={highestManager}/>
+      </div>
     </Fragment>
     
   )
