@@ -2,5 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #3d003e;
+}
+
+@media only screen and (min-width: 1200px) {
+  .component_parent {
+    display: flex;
+  }
 }

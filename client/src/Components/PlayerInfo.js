@@ -1,12 +1,10 @@
 import React, {Fragment, useState, useEffect} from 'react'
-import Players from './Players';
 import './Players.css';
 
 const PlayerInfo = ({data, title}) => {
   const [gameWeek, setGameWeek] = useState(true)
   const [totalPoints, setTotalPoints] = useState(false)
   const [sortedData, setSortedData] = useState([])
-
 
   const gameweekOn = () => {
     setGameWeek(true);
@@ -30,7 +28,7 @@ const PlayerInfo = ({data, title}) => {
 
   return (
     <Fragment>
-      <div className='player_info'>
+      <div className='player_info table_container'>
         
         <div className='player_info_buttons'>
           <h3>{title}</h3>
@@ -47,7 +45,7 @@ const PlayerInfo = ({data, title}) => {
         <table className='table w-75 m-auto '>
           <thead>
             <tr>
-              <th>Name</th>
+              <th width="300" >Name</th>
               <th>GW</th>
               <th>Total</th>
               <th>Price</th>

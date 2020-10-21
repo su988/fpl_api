@@ -22,7 +22,7 @@ const MiniLeague = () => {
 
   return (
     <Fragment>
-      <div className='mini_league'>
+      <div className='mini_league table_container'>
         <h4>League Table</h4>
         <table className='table'>
           <thead>

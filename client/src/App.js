@@ -10,10 +10,18 @@ function App() {
   return (
     <div className='app'>
       <Navbar />
-      <MiniLeague />
-      <FetchManagerInfo />
-      <GameWeekWinners />
-      <Players />
+      <div className='component_parent'>
+        <div >
+          <MiniLeague />
+          <FetchManagerInfo />
+          <GameWeekWinners />
+        </div>
+        <div>
+          <Players />
+        </div>
+        
+      </div>
+      
     </div>
 
   );

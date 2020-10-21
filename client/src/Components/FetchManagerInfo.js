@@ -37,12 +37,15 @@ const FetchManagerInfo = () => {
   
   return (
     <Fragment>
-      <div className='king manager_detail'>
+      <div className='manager_detail_container'>
+        <div className='king manager_detail'>
         <ManagerDetails title={'Manager of the Week'} data={king}/>
+        </div>
+        <div className="highest_score manager_detail">
+          <ManagerDetails title={'Highest GW Score'} data={highestManager}/>
+        </div>
       </div>
-      <div className="highest_score manager_detail">
-        <ManagerDetails title={'Highest GW Score'} data={highestManager}/>
-      </div>
+      
     </Fragment>
     
   )
