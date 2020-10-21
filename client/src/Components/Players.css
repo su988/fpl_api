@@ -17,13 +17,15 @@
 
 .player_info_buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin-bottom: 20px;
   margin-right: 10px;
 }
 
-.player_info_buttons h3 {
-  font-size: 16px;
+.player_info_buttons h4 {
+  /* margin-left: 20px; */
+  margin-top: 17px;
+  margin-right: 20px;
 }
 
 button {
@@ -53,6 +55,10 @@ button {
     margin: 0 auto;
     margin-bottom: 20px;
     border-radius: 10px;
+  }
+
+  .player_info_buttons {
+    justify-content: center;
   }
 }
 

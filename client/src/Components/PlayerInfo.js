@@ -31,7 +31,7 @@ const PlayerInfo = ({data, title}) => {
       <div className='player_info table_container'>
         
         <div className='player_info_buttons'>
-          <h3>{title}</h3>
+          <h4>{title}</h4>
           <div>
             <button className={gameWeek ? 'on' : 'off'} onClick={gameweekOn}>
             GW
