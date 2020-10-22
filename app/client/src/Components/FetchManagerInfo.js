@@ -8,7 +8,7 @@ const FetchManagerInfo = () => {
 
   const getKingOfWeek = async () => {
     try {
-      const response = await fetch('http://localhost:5000/king');
+      const response = await fetch('/king');
       const jsonData = await response.json();
      
       // console.log(jsonData)
@@ -20,7 +20,7 @@ const FetchManagerInfo = () => {
 
   const getHighestManager = async () => {
     try {
-      const response = await fetch('http://localhost:5000/highest-gw');
+      const response = await fetch('/highest-gw');
       const jsonData = await response.json();
 
       // console.log(jsonData)
@@ -42,7 +42,7 @@ const FetchManagerInfo = () => {
         <ManagerDetails title={'Manager of the Week'} data={king}/>
         </div>
         <div className="highest_score manager_detail">
-          <ManagerDetails title={'Highest GW Score'} data={highestManager}/>
+          <ManagerDetails title={'Highest Overall Score'} data={highestManager}/>
         </div>
       </div>
       

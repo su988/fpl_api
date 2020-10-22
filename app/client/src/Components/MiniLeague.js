@@ -6,7 +6,7 @@ const MiniLeague = () => {
 
   const getLeague = async () => {
     try {
-      const response = await fetch('http://localhost:5000/mini-league');
+      const response = await fetch('/mini-league');
       const jsonData = await response.json();
      
       // console.log(jsonData)

@@ -14,7 +14,7 @@
   color: #ff0082;
   position: absolute;
   top: -10px;
-  left: 30px;
+  left: 40px;
   -webkit-transform: rotate(320deg);
   -moz-transform: rotate(320deg);
   -ms-transform: rotate(320deg);
@@ -36,14 +36,22 @@
     margin-bottom: 20px;
     border-radius: 10px;
   }
+
+  .gg-crown {
+    left: 20px;
+  }
 }
 
 /* laptop */
 
 @media only screen and (min-width: 1200px) {
+  .manager_detail_container {
+    margin-left: 20px;
+  }
+
   .manager_detail {
     width: 300px;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     margin-right: 0;
     border-radius: 20px;
   }

@@ -1,12 +1,19 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const path = require('path');
 const pool = require('./db.js')
+const PORT = process.env.PORT || 5000;
 
 const game_week = 5;
 
 app.use(cors());
 app.use(express.json());
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static(path.join(__dirname, 'client/build')))  
+  
+}
 
 app.get('/mini-league', async (req, res) => {
   try {
@@ -64,8 +71,8 @@ app.get('/players', async (req, res) => {
   }
 })
 
-app.listen(5000, () => {
-  console.log(`server is up and running on port 5000`)
+app.listen(PORT, () => {
+  console.log(`server is up and running on port ${PORT}`)
 });
 
 

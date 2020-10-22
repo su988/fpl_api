@@ -10,7 +10,7 @@ const Players = () => {
 
   const getPlayers = async () => {
     try {
-      const response = await fetch('http://localhost:5000/players');
+      const response = await fetch('/players');
       const jsonData = await response.json();
 
       const midfielders = jsonData.filter(obj => obj.position === 'MID')

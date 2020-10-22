@@ -6,7 +6,7 @@ const GameWeekWinners = () => {
   
   const getWinners = async () => {
     try {
-      const response = await fetch('http://localhost:5000/gw-winners');
+      const response = await fetch('/gw-winners');
       const jsonData = await response.json();
 
       setWinners(jsonData)
