@@ -1,5 +1,7 @@
 # fantasy premiere league dashboard
 
+LIVE - https://fpl-dash.herokuapp.com/
+
 ##### Tracking player / mini league data
 
 - Python request to get data from Fantasy Premiere League API
